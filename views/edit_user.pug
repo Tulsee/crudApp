@@ -1,0 +1,13 @@
+extends layout
+
+block content
+    form.form-signin(method='POST' action='/edit/update/'+ user._id)
+        .form-label-group
+            input.form-control(type='String', value=user.firstName, name='first', required='', autofocus='')
+        .form-label-group
+            input.form-control(type='String', value=user.LastName,name='last', required='')
+        .form-label-group
+            input.form-control(type='email', value=user.email, name='email', required='')
+        .form-label-group
+            input.form-control(type='password', value=user.password, name='password', required='')
+        button.btn.btn-lg.btn-primary.btn-block(type='submit') Submit

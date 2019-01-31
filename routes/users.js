@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
 });
 
 // post users listing
-router.post('/post', function(req, res){
+router.post('/POST', function(req, res){
     user = new user();
     user.firstName = req.body.first;
     user.LastName = req.body.last;
@@ -25,5 +25,9 @@ router.post('/post', function(req, res){
         }
     });
 });
+
+
+
+
 
 module.exports = router;

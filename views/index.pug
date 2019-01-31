@@ -4,6 +4,5 @@ block content
   h1= title
   ul.list-group
     each users, i in user
-      li.list-group-item= users.firstName
-      li.list-group-item= users.LastName
-      li.list-group-item= users.email
+      li.list-group-item
+        a(href="/get/"+users._id)=users.firstName + "   "+ users.LastName
